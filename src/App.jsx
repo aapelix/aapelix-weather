@@ -56,7 +56,7 @@ function App() {
 
     try {
       const { data } = await axios.get(
-        `http://api.openweathermap.org/data/2.5/forecast?lat=${suggestion.lat}&lon=${suggestion.lon}&appid=${apiKey}`
+        `https://api.openweathermap.org/data/2.5/forecast?lat=${suggestion.lat}&lon=${suggestion.lon}&appid=${apiKey}`
       );
 
       setForecastData(data);
@@ -72,7 +72,7 @@ function App() {
       if (value != "") {
         try {
           const { data } = await axios.get(
-            `http://api.openweathermap.org/geo/1.0/direct?q=${value}&limit=10&appid=${apiKey}`
+            `https://api.openweathermap.org/geo/1.0/direct?q=${value}&limit=10&appid=${apiKey}`
           );
 
           setSuggestions(data);
